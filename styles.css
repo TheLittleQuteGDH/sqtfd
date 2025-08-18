@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+body {
+    background-color: #f8f5f0;
+    color: #333;
+    line-height: 1.6;
+}
+/* 顶部标题栏样式 */
+header {
+    background-image: url('img/大厅.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* 导航栏样式 */
+nav {
+    background-color: #d4a76a;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+nav li {
+    margin: 0 1.5rem;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+}
+nav a:hover {
+    opacity: 0.8;
+}
+/* 容器样式 */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+/* 板块通用样式 */
+section {
+    margin: 4rem 0;
+}
+h2 {
+    color: #b85c38;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #d4a76a;
+    margin: 0.5rem auto;
+}
+/* 关于我们样式 */
+.intro-text {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+/* 特色菜品板块容器样式（仅保留基础结构） */
+.dishes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    min-height: 80px; /* 避免板块过矮，保持页面平衡 */
+}
+/* 店内环境板块容器样式（仅保留基础结构） */
+.environment {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    min-height: 80px; /* 避免板块过矮，保持页面平衡 */
+}
+.environment + p {
+    color: #555;
+    font-size: 1rem;
+}
+/* 联系方式样式 */
+#contact {
+    text-align: center;
+}
+#contact p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+#contact ul {
+    color: #555;
+}
+#contact strong {
+    color: #b85c38;
+}
+/* 弹窗基础样式（保留结构，避免交互报错） */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.popup-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    text-align: center;
+    animation: popupZoom 0.5s ease-out;
+}
+.popup-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.popup-content h3 {
+    color: #b85c38;
+    margin-top: 1rem;
+}
+.popup-content p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+/* 弹窗动画 */
+@keyframes popupZoom {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.zoom-in {
+    animation: zoomInAnimation 0.5s ease-out;
+}
+@keyframes zoomInAnimation {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* 页脚样式 */
+footer {
+    background-color: #d4a76a;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+footer p {
+    margin: 0.5rem 0;
+}

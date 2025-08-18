@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顺德黄连石桥头饭店 - 地道顺德味</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 平滑滚动效果 */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部标题栏 -->
+    <header>
+        <div class="header-content">
+            <h1>顺德黄连石桥头饭店</h1>
+            <p class="subtitle">传承顺德味道，品味地道美食</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">关于我们</a></li>
+            <li><a href="#dishes">特色菜品</a></li>
+            <li><a href="#environment">店内环境</a></li>
+            <li><a href="#contact">联系方式</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- 关于我们 -->
+        <section id="about">
+            <h2>关于我们</h2>
+            <div class="intro">
+                <div class="intro-text">
+                    <p>顺德黄连石桥头饭店是一家隐匿于黄连工业区的宝藏餐厅，地址位于广东省佛山市顺德区黄连工业大道四路联二文化广场，营业时间为10：00 - 22：00。</p>
+                    <br>
+                    <p>饭店无豪华装修，却充满质朴烟火气，主打地道顺德菜，以新鲜食材、优质口味和亲民价格为宗旨，消费属大排档水平，却能呈现星级酒楼口感，设有包间，适合家庭聚会、朋友聚餐等场合。</p>
+                    <br>
+                    <p>欢迎各位食客到店品尝地道顺德风味！</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 特色菜品（仅留板块标题） -->
+        <section id="dishes">
+            <h2>特色菜品（图片仅供参考）</h2>
+            <div class="dishes">
+                <!-- 省略具体菜品卡片内容 -->
+            </div>
+        </section>
+
+        <!-- 店内环境（仅留板块标题） -->
+        <section id="environment">
+            <h2>店内环境（图片仅供参考）</h2>
+            <div class="environment">
+                <!-- 省略具体环境图片内容 -->
+            </div>
+            <p style="text-align: center; margin-top: 1rem;">饭店环境整洁舒适，设有大厅和包间，适配各类聚餐需求。</p>
+        </section>
+
+        <!-- 联系方式 -->
+        <section id="contact">
+            <h2>联系方式</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 1rem;">如需咨询，可通过以下方式联系：</p>
+            <ul style="list-style: none; font-size: 1.1rem; line-height: 2; max-width: 600px; margin: 0 auto; text-align: left;">
+                <li><strong>联系电话：</strong>13800138000（示例号码，可按需修改）</li>
+                <li><strong>联系邮箱：</strong>shunde_shiqiaotou@163.com（示例邮箱，可按需修改）</li>
+                <li><strong>店铺地址：</strong>广东省佛山市顺德区黄连工业大道四路联二文化广场</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 顺德黄连石桥头饭店 - 保留所有权利</p>
+        <p>本站CDN由腾讯云Edgeone免费计划与Cloudflare免费计划提供</p>
+        <p>品味顺德黄连美食，从这里开始</p>
+    </footer>
+
+    <!-- 弹窗模块（保留基础结构，适配原有交互逻辑） -->
+    <div class="popup-overlay" id="popup-overlay" onclick="closeDishPopup()">
+        <div class="popup-content">
+            <img id="popup-img" src="" alt="图片">
+            <h3 id="popup-title"></h3>
+            <p id="popup-description"></p>
+        </div>
+    </div>
+
+    <script>
+        // 保留弹窗基础函数，避免控制台报错
+        function openDishPopup(title, imgSrc, description) {
+            document.getElementById('popup-title').innerText = title;
+            document.getElementById('popup-img').src = imgSrc;
+            document.getElementById('popup-description').innerText = description;
+            document.getElementById('popup-overlay').style.display = 'flex';
+            document.getElementById('popup-img').classList.add('zoom-in');
+        }
+        function closeDishPopup() {
+            document.getElementById('popup-overlay').style.display = 'none';
+            document.getElementById('popup-img').classList.remove('zoom-in');
+        }
+    </script>
+</body>
+</html>
