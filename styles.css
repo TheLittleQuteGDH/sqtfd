@@ -1,15 +1,41 @@
+/* 在现有CSS基础上添加以下内容 */
+
+/* 平滑滚动平滑滚动动画 */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* 适配导航栏高度，避免内容被导航栏遮挡 */
+}
+
+/* 添加滚动时的过渡动画 */
+body {
+    scroll-behavior: smooth;
+}
+
+/* 为各个板块添加进入动画 */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
+
 body {
     background-color: #f8f5f0;
     color: #333;
     line-height: 1.6;
 }
-/* 顶部标题栏样式 */
+
 header {
     background-image: url('img/大厅.jpg');
     background-size: cover;
@@ -22,6 +48,7 @@ header {
     text-align: center;
     position: relative;
 }
+
 header::before {
     content: '';
     position: absolute;
@@ -31,20 +58,24 @@ header::before {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
 .header-content {
     position: relative;
     z-index: 1;
 }
+
 h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
+
 .subtitle {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
 }
+
 /* 导航栏样式 */
 nav {
     background-color: #d4a76a;
@@ -53,14 +84,17 @@ nav {
     top: 0;
     z-index: 100;
 }
+
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
 }
+
 nav li {
     margin: 0 1.5rem;
 }
+
 nav a {
     color: white;
     text-decoration: none;
@@ -68,19 +102,21 @@ nav a {
     font-size: 1.1rem;
     transition: opacity 0.3s;
 }
+
 nav a:hover {
     opacity: 0.8;
 }
-/* 容器样式 */
+
 .container {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
-/* 板块通用样式 */
+
 section {
     margin: 4rem 0;
 }
+
 h2 {
     color: #b85c38;
     font-size: 2rem;
@@ -88,6 +124,7 @@ h2 {
     text-align: center;
     position: relative;
 }
+
 h2::after {
     content: '';
     display: block;
@@ -96,46 +133,73 @@ h2::after {
     background-color: #d4a76a;
     margin: 0.5rem auto;
 }
-/* 关于我们样式 */
-.intro-text {
-    max-width: 1000px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-}
-/* 特色菜品板块容器样式（仅保留基础结构） */
+
 .dishes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    min-height: 80px; /* 避免板块过矮，保持页面平衡 */
 }
-/* 店内环境板块容器样式（仅保留基础结构） */
+
+.dish-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.dish-card:hover {
+    transform: translateY(-5px);
+}
+
+.dish-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.dish-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dish-info {
+    padding: 1.5rem;
+}
+
+.dish-info h3 {
+    color: #b85c38;
+    margin-bottom: 0.5rem;
+}
+
+/* 环境图片 */
 .environment {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
-    min-height: 80px; /* 避免板块过矮，保持页面平衡 */
 }
-.environment + p {
-    color: #555;
-    font-size: 1rem;
+
+.env-img {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
-/* 联系方式样式 */
-#contact {
-    text-align: center;
+
+.env-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
-#contact p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    color: #333;
+
+.env-img:hover img {
+    transform: scale(1.05);
 }
-#contact ul {
-    color: #555;
-}
-#contact strong {
-    color: #b85c38;
-}
-/* 弹窗基础样式（保留结构，避免交互报错） */
+
+/* Popup Styles */
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -148,6 +212,7 @@ h2::after {
     align-items: center;
     z-index: 999;
 }
+
 .popup-content {
     background: white;
     padding: 2rem;
@@ -156,22 +221,26 @@ h2::after {
     text-align: center;
     animation: popupZoom 0.5s ease-out;
 }
+
 .popup-content img {
     width: 100%;
     height: auto;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
+
 .popup-content h3 {
     color: #b85c38;
     margin-top: 1rem;
 }
+
 .popup-content p {
     margin-top: 1rem;
     font-size: 1.1rem;
     color: #555;
 }
-/* 弹窗动画 */
+
+/* Zoom animation for popup */
 @keyframes popupZoom {
     0% {
         transform: scale(0.8);
@@ -182,9 +251,12 @@ h2::after {
         opacity: 1;
     }
 }
+
+/* For zoom-in effect when opening the image */
 .zoom-in {
     animation: zoomInAnimation 0.5s ease-out;
 }
+
 @keyframes zoomInAnimation {
     0% {
         transform: scale(0.8);
@@ -193,14 +265,62 @@ h2::after {
         transform: scale(1);
     }
 }
-/* 页脚样式 */
-footer {
-    background-color: #d4a76a;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 2rem;
+
+/* 联系我们部分样式 */
+.container select {
+    font-size: 1rem;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    width: 100%;
+    position: relative;
 }
-footer p {
-    margin: 0.5rem 0;
+
+/* 图标样式 */
+.container select option {
+    padding-left: 30px;
+    position: relative;
+}
+
+/* 给图标添加空间 */
+.container select option img {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+}
+
+/* 按钮样式 */
+.container #navigate-btn {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.container #navigate-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.container #navigate-btn:active {
+    transform: translateY(0);
+}
+
+/* 底部样式 */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #d4a76a;
+    font-size: 0.9rem;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
 }

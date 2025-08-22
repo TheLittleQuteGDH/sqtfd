@@ -4,22 +4,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>顺德黄连石桥头饭店 - 地道顺德味</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* 平滑滚动效果 */
+<style>        /* 平滑滚动效果 */
         html {
             scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
-    <!-- 顶部标题栏 -->
     <header>
         <div class="header-content">
             <h1>顺德黄连石桥头饭店</h1>
             <p class="subtitle">传承顺德味道，品味地道美食</p>
         </div>
     </header>
-
     <nav>
         <ul>
             <li><a href="#about">关于我们</a></li>
@@ -35,51 +32,174 @@
             <h2>关于我们</h2>
             <div class="intro">
                 <div class="intro-text">
-                    <p>顺德黄连石桥头饭店是一家隐匿于黄连工业区的宝藏餐厅，地址位于广东省佛山市顺德区黄连工业大道四路联二文化广场，营业时间为10：00 - 22：00。</p>
+                    <p>顺德黄连石桥头饭店是一家隐匿于黄连工业区的宝藏餐厅。其地址位于广东省佛山市顺德区黄连工业大道四路联二文化广场，营业时间为10：00 - 22：00</p>
                     <br>
-                    <p>饭店无豪华装修，却充满质朴烟火气，主打地道顺德菜，以新鲜食材、优质口味和亲民价格为宗旨，消费属大排档水平，却能呈现星级酒楼口感，设有包间，适合家庭聚会、朋友聚餐等场合。</p>
+                    <p>饭店环境犹如烟火人间的一颗明珠，虽没有豪华装修，但充满质朴气息。这里主打地道顺德菜，以新鲜食材、好味道和实惠价格为宗旨。</p>
                     <br>
-                    <p>欢迎各位食客到店品尝地道顺德风味！</p>
+                    <p>菜品方面，顺德鱼生是其招牌，鱼片薄如蝉翼、纹理清晰，搭配多样佐料，口感冰凉爽脆、鲜嫩爽滑。此外，还有凤眼果炆鸡、啫啫猪大肠、无骨蒸鱼等特色菜品。凤眼果炆鸡中凤眼果香甜软糯，鸡肉嫩滑；啫啫猪大肠香气浓郁；无骨蒸鱼则尽显鱼肉鲜嫩本味。</p>
+                    <br>
+                    <p>饭店消费亲民，属于大排档价格，却能让食客吃出星级酒楼的味道。且设有包间，适合家庭聚会、朋友聚餐等场合。</p>
+                    <br>
+                   <p>欢迎各位客人来顺德黄连石桥头饭店用餐哦！</p>
+              </div>
+            </div>
+        </section>
+
+        <!-- 特色菜品 -->
+        <section id="dishes">
+            <h2>特色招牌菜品</h2>
+            <div class="dishes">
+                <div class="dish-card" onclick="openDishPopup('美极罗氏虾', 'img/美极罗氏虾.jpg', '酱汁浓郁裹满虾身，鲜咸中带着回甘，吮指都不够。')">
+                    <div class="dish-img">
+                        <img src="img/美极罗氏虾.jpg" alt="美极罗氏虾">
+                    </div>
+                    <div class="dish-info">
+                        <h3>美极罗氏虾</h3>
+                        <h4>价格：时价</h4>
+                    </div>
+                </div>
+                <div class="dish-card" onclick="openDishPopup('芥辣罗氏虾+椒盐虾头（两味）', 'img/芥辣罗氏虾+椒盐虾头.jpg', '虾肉带着微呛芥香提神开胃，虾头炸得金黄焦脆，椒盐味渗透每一丝肌理，一虾两吃，双重满足。')">
+                    <div class="dish-img">
+                        <img src="img/芥辣罗氏虾+椒盐虾头.jpg" alt="芥辣罗氏虾+椒盐虾头（两味）">
+                    </div>
+                    <div class="dish-info">
+                        <h3>芥辣罗氏虾+椒盐虾头（两味）</h3>
+                        <h4>价格：时价</h4>
+                    </div>
+                </div>
+                <div class="dish-card" onclick="openDishPopup('经典粤式白切走地鸡', 'img/白切走地鸡.jpg', '皮滑肉嫩，蘸上姜蓉，最是凸显鸡肉本味的鲜甜。')">
+                    <div class="dish-img">
+                        <img src="img/白切走地鸡.jpg" alt="经典粤式白切走地鸡">
+                    </div>
+                    <div class="dish-info">
+                        <h3>经典粤式白切走地鸡</h3>
+                        <h4>价格：98元/只</h4>
+                    </div>
+                </div>
+                <div class="dish-card" onclick="openDishPopup('鱼泡啫牛花肉', 'img/鱼泡啫牛花肉.jpg', '砂锅焗出的香气扑鼻，鱼泡Q弹，牛花肉嫩滑，酱汁浓郁下饭。')">
+                    <div class="dish-img">
+                        <img src="img/鱼泡啫牛花肉.jpg" alt="鱼泡啫牛花肉">
+                    </div>
+                    <div class="dish-info">
+                        <h3>鱼泡啫牛花肉</h3>
+                        <h4>价格：¥98/例</h4>
+                    </div>
+                </div>
+                <div class="dish-card" onclick="openDishPopup('反骨白鳝', 'img/反骨白鳝.jpg', '肉质紧实，滋味深入，每一口都是浓郁鲜香。')">
+                    <div class="dish-img">
+                        <img src="img/反骨白鳝.jpg" alt="反骨白鳝">
+                    </div>
+                    <div class="dish-info">
+                        <h3>反骨白鳝</h3>
+                        <h4>价格：时价</h4>
+                    </div>
+                 </div>
+                 <div class="dish-card" onclick="openDishPopup('蒸无骨鲫鱼', 'img/蒸无骨鲫鱼.jpg', '清蒸锁鲜，鱼肉细腻无刺，鲜甜清爽，解腻又暖胃。')">
+                    <div class="dish-img">
+                        <img src="img/蒸无骨鲫鱼.jpg" alt="蒸无骨鲫鱼">
+                    </div>
+                    <div class="dish-info">
+                        <h3>蒸无骨鲫鱼</h3>
+                        <h4>价格：¥48/斤</h4>
+                    </div>
+                 </div>
+                  <div class="dish-card" onclick="openDishPopup('罗氏虾炆大鹅', 'img/罗氏虾炆大鹅.jpg', '当鲜嫩肥美的罗氏虾，遇上肉质紧实的大鹅，开启奇妙味觉之旅。慢火炆煮让二者滋味交融，虾的鲜浸润鹅肉，鹅肉油脂又赋予虾独特香气，葱香点缀更添层次，海陆风味碰撞，每一口都是惊喜 。')">
+                    <div class="dish-img">
+                        <img src="img/罗氏虾炆大鹅.jpg" alt="罗氏虾炆大鹅">
+                    </div>
+                    <div class="dish-info">
+                        <h3>罗氏虾炆大鹅</h3>
+                        <h4>价格：时价</h4>
+                    </div>
+                  </div>
+                  <div class="dish-card" onclick="openDishPopup('黑松露蒸草鸡', 'img/黑松露蒸草鸡.jpg', '精选草鸡，搭配珍贵黑松露，以清蒸保留本味。黑松露独特香气融入鲜嫩鸡肉，葱姜提鲜，鸡皮滑嫩、鸡肉多汁，一口尝尽自然鲜粹，是对食材原味与高端食材融合的精妙呈现 。')">
+                    <div class="dish-img">
+                        <img src="img/黑松露蒸草鸡.jpg" alt="黑松露蒸草鸡">
+                    </div>
+                    <div class="dish-info">
+                        <h3>黑松露蒸草鸡</h3>
+                        <h4>价格：¥148/只</h4>
+                    </div>
+                 </div>
+                    <div class="dish-card" onclick="openDishPopup('招牌酸梅鹅', 'img/招牌酸梅鹅.jpg', '传承特色的酸梅鹅，酸梅酱是灵魂。鹅肉经精心烹制，吸收酸梅的酸甜醇厚，表皮油亮、肉质酥软，酸甜滋味解腻又开胃，一口下去，酸、甜、香在舌尖交织，尽显招牌菜的魅力 。')">
+                    <div class="dish-img">
+                        <img src="img/招牌酸梅鹅.jpg" alt="招牌酸梅鹅">
+                    </div>
+                    <div class="dish-info">
+                        <h3>招牌酸梅鹅</h3>
+                        <h4>价格：¥98/半只</h4>
+                    </div>
+                 </div>
+                       <div class="dish-card" onclick="openDishPopup('香炸芋夹扣', 'img/香炸芋夹扣.jpg', '软糯芋头作原料，夹入鲜香内馅，经油炸后外皮金黄酥脆，内里绵软香甜。摆盘精致，花香点缀更添雅致，咬开是芋头的粉糯与内馅的美妙融合，是香脆与软糯交织的奇妙小食 。')">
+                    <div class="dish-img">
+                        <img src="img/香炸芋夹扣.jpg" alt="香炸芋夹扣">
+                    </div>
+                    <div class="dish-info">
+                        <h3>香炸芋夹扣</h3>
+                        <h4>价格：¥38/例</h4>
+                    </div>
+                 </div>
+                         <div class="dish-card" onclick="openDishPopup('酸甜咕噜肉', 'img/酸甜咕噜肉.jpg', '经典粤菜咕噜肉，肉块裹粉炸至金黄酥脆，与彩椒、洋葱同炒，浇淋酸甜酱汁。外脆里嫩的肉块，裹着浓郁开胃的酸甜汁，彩蔬增添清爽，一口找回记忆中港式茶餐厅的经典美味 。')">
+                    <div class="dish-img">
+                        <img src="img/酸甜咕噜肉.jpg" alt="酸甜咕噜肉">
+                    </div>
+                    <div class="dish-info">
+                        <h3>酸甜咕噜肉</h3>
+                        <h4>价格：¥43/例</h4>
+                    </div>
+                 </div>
+                  
+            </div>
+
+        </section>
+
+        <!-- 店内环境 -->
+        <section id="environment">
+            <h2>店内环境</h2>
+            <div class="environment">
+                <div class="env-img" onclick="openDishPopup('大房环境', 'img/大房.jpg', '空间开阔敞亮，超大圆桌自带转盘，适合多人聚餐。浅蓝窗帘柔和雅致，搭配简洁白墙，木椅规整摆放，既有家庭聚会的温馨感，又能承载稍大型的亲友、同事宴请，氛围热闹又不失舒适 。大约可以坐18-20人。')">
+                    <img src="img/大房.jpg" alt="大房环境">
+                </div>
+                <div class="env-img" onclick="openDishPopup('萧龙房', 'img/萧龙房.jpg', '整体简洁大方，墙面洁白，搭配中式风格的八角窗，透着雅致。墙上的装饰画增添氛围，圆桌铺着粉色桌布，配着椅套，规整又有档次，很适合宴请宾客，能给客人舒适的用餐环境。大约可以坐14-16人')">
+                    <img src="img/萧龙房.jpg" alt="萧龙房">
+                </div>
+                <div class="env-img" onclick="openDishPopup('连南房', 'img/连南房.jpg', '以中式屏风为亮点，山水花鸟图案瞬间拉满意境，粉桌布中和中式的厚重。空间简洁，空调、风扇齐全，适合追求用餐氛围，想边吃边感受中式美学的食客，商务小聚、好友雅集都很合适 。可坐10-12人')">
+                    <img src="img/连南房.jpg" alt="连南房">
+                </div>
+                <div class="env-img" onclick="openDishPopup('敞亮的大厅', 'img/大厅.jpg', '挑高设计让空间通透大气，“石桥头饭店”招牌醒目。粉桌布统一布置，风扇、装饰画点缀，兼具热闹与规整，能承接婚宴、团建等大型聚餐，烟火气与氛围感并存，是饭店人气汇聚的核心区域 。')">
+                    <img src="img/大厅.jpg" alt="敞亮的大厅">
                 </div>
             </div>
+            <p style="text-align: center; margin-top: 1rem;">饭店环境整洁舒适，设有大厅和小房间间，适合家庭聚餐、朋友小聚等各种场合。</p>
         </section>
 
-        <!-- 特色菜品（仅留板块标题） -->
-        <section id="dishes">
-            <h2>特色菜品（图片仅供参考）</h2>
-            <div class="dishes">
-                <!-- 省略具体菜品卡片内容 -->
-            </div>
-        </section>
+        <!-- 联系我们板块 -->
+    <div class="container">
+        <h2>联系我们</h2>
+        <p><strong>联系电话：</strong>+86 13928203049</p>
+        <p><strong>联系邮箱：</strong>Sqtfd@sqtfd.com</p>
+        <p><strong>饭店地址：</strong>顺德区黄黄连工业大道四路联二文化广场</p>
+        <p><strong>本店提供免费的WIFI，如要导航前往，选择对应的导航系统，再点击下方的按钮，即可跳转到导航页面，方便快捷！</strong></p>
 
-        <!-- 店内环境（仅留板块标题） -->
-        <section id="environment">
-            <h2>店内环境（图片仅供参考）</h2>
-            <div class="environment">
-                <!-- 省略具体环境图片内容 -->
-            </div>
-            <p style="text-align: center; margin-top: 1rem;">饭店环境整洁舒适，设有大厅和包间，适配各类聚餐需求。</p>
-        </section>
-
-        <!-- 联系方式 -->
-        <section id="contact">
-            <h2>联系方式</h2>
-            <p style="font-size: 1.1rem; margin-bottom: 1rem;">如需咨询，可通过以下方式联系：</p>
-            <ul style="list-style: none; font-size: 1.1rem; line-height: 2; max-width: 600px; margin: 0 auto; text-align: left;">
-                <li><strong>联系电话：</strong>13800138000（示例号码，可按需修改）</li>
-                <li><strong>联系邮箱：</strong>shunde_shiqiaotou@163.com（示例邮箱，可按需修改）</li>
-                <li><strong>店铺地址：</strong>广东省佛山市顺德区黄连工业大道四路联二文化广场</li>
-            </ul>
-        </section>
+        <!-- 导航链接和下拉框 -->
+        <label for="map-select">选择地图服务：境外顾客可以使用Google、Apple地图哦！</label>
+        <select id="map-select">
+            <option value="amap">高德地图（推荐）</option>
+            <option value="baidu">百度地图</option>
+            <option value="qqmap">腾讯地图</option>
+            <option value="apple">Apple地图（境外顾客可使用）</option>
+            <option value="google">Google地图（境外顾客可使用）</option> <!-- 新增Google地图 -->
+        </select><br>
+        <button id="navigate-btn">点我导航</button>
     </div>
 
+
     <footer>
-        <p>© 2025 顺德黄连石桥头饭店 - 保留所有权利</p>
-        <p>本站CDN由腾讯云Edgeone免费计划与Cloudflare免费计划提供</p>
+        <p>© 2025 顺德黄连石桥头饭店 - 保留所有权利 本站CDN由腾讯云Edgeone免费计划与Cloudflare免费计划提供</p>
         <p>品味顺德黄连美食，从这里开始</p>
     </footer>
 
-    <!-- 弹窗模块（保留基础结构，适配原有交互逻辑） -->
+    <!-- Popup for dish & environment details -->
     <div class="popup-overlay" id="popup-overlay" onclick="closeDishPopup()">
         <div class="popup-content">
             <img id="popup-img" src="" alt="图片">
@@ -89,18 +209,66 @@
     </div>
 
     <script>
-        // 保留弹窗基础函数，避免控制台报错
-        function openDishPopup(title, imgSrc, description) {
-            document.getElementById('popup-title').innerText = title;
-            document.getElementById('popup-img').src = imgSrc;
-            document.getElementById('popup-description').innerText = description;
-            document.getElementById('popup-overlay').style.display = 'flex';
-            document.getElementById('popup-img').classList.add('zoom-in');
+    // 打开弹窗
+    function openDishPopup(title, imgSrc, description) {
+        document.getElementById('popup-title').innerText = title;
+        document.getElementById('popup-img').src = imgSrc;
+        document.getElementById('popup-description').innerText = description;
+        document.getElementById('popup-overlay').style.display = 'flex';
+        document.getElementById('popup-img').classList.add('zoom-in');
+    }
+
+    // 关闭弹窗
+    function closeDishPopup() {
+        document.getElementById('popup-overlay').style.display = 'none';
+        document.getElementById('popup-img').classList.remove('zoom-in');
+    }
+
+    // 新增板块进入视口时的动画效果
+    document.addEventListener('DOMContentLoaded', function() {
+        // 初始检查可见的板块
+        checkVisibleSections();
+        
+        // 滚动时检查可见的板块
+        window.addEventListener('scroll', checkVisibleSections);
+    });
+
+    function checkVisibleSections() {
+        const sections = document.querySelectorAll('section');
+        const navHeight = document.querySelector('nav').offsetHeight;
+        
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const sectionBottom = section.getBoundingClientRect().bottom;
+            
+            // 当板块顶部进入视口时激活动画
+            if (sectionTop < window.innerHeight - navHeight - 100 && sectionBottom > 0) {
+                section.classList.add('active');
+            }
+
+            // 导航按钮逻辑
+    document.getElementById('navigate-btn').addEventListener('click', function() {
+        const selectedMap = document.getElementById('map-select').value;
+        let mapUrl = '';
+
+        if (selectedMap === 'amap') {
+            mapUrl = 'https://surl.amap.com/wICI2OFr07I';
+        } else if (selectedMap === 'baidu') {
+            mapUrl = 'https://j.map.baidu.com/23/hPpi';
+        } else if (selectedMap === 'apple') {
+            mapUrl = 'https://maps.apple.com/place?address=%E4%B8%AD%E5%9B%BD%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%BD%9B%E5%B1%B1%E5%B8%82%E9%A1%BA%E5%BE%B7%E5%8C%BA%E9%BB%84%E8%BF%9E%E5%B7%A5%E4%B8%9A%E5%A4%A7%E9%81%93%E5%9B%9B%E8%B7%AF%E8%81%94%E4%BA%8C%E6%96%87%E5%8C%96%E5%B9%BF%E5%9C%BA(%E4%B8%9C%E5%8D%97%E8%A7%92)&coordinate=22.88329%2C113.147&name=%E7%9F%B3%E6%A1%A5%E5%A4%B4%E9%A5%AD%E5%BA%97&place-id=H2710I3F9820D0CE2EE&_provider=57879';
+        } else if (selectedMap === 'qqmap') {
+            mapUrl = 'https://mmapgwh.map.qq.com/shortlink/short?l=_6fd44e037199ab7029b76fb9711859ff';
+        } else if (selectedMap === 'google') {
+            mapUrl = 'https://maps.app.goo.gl/6axmCMEWfGo42JSo6';
         }
-        function closeDishPopup() {
-            document.getElementById('popup-overlay').style.display = 'none';
-            document.getElementById('popup-img').classList.remove('zoom-in');
+
+        if (mapUrl) {
+            window.open(mapUrl, '_blank');
         }
-    </script>
+    });
+        });
+    }
+</script>
 </body>
 </html>
